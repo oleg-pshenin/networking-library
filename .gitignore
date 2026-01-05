@@ -1,0 +1,39 @@
+**/bin/
+**/obj/
+
+###
+# VS/MD solution and project files
+###
+[Ee]xportedObj/
+*.booproj
+*.csproj
+*.sln
+*.suo
+*.svd
+*.unityproj
+*.user
+*.userprefs
+*.pidb
+*.vscode
+*.vs
+*.zip
+*.zipp
+*.log
+*.exe0.log
+*.dwlt
+
+
+###
+# OS generated
+###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# jet brains
+
+**/.idea/
