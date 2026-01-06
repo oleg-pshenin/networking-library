@@ -13,6 +13,6 @@ On top of that, there is an high-level “framework” design based on self-sync
 
 This repository contains some test coverage for the delivery protocols (see [Tests](./Tests)) and a small console C# app with a matchmaking implementation used in the demos (see [MatchMakingServer](./MatchMakingServer)).
 
-Demo videos (real prototypes using this library):\
-https://www.youtube.com/watch?v=2RFL9UODowE\
+Demo videos (real prototypes using this library):  
+https://www.youtube.com/watch?v=2RFL9UODowE  
 https://www.youtube.com/watch?v=vcZ-CErBQlU
