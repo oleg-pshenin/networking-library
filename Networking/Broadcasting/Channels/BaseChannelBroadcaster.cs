@@ -12,7 +12,7 @@ namespace Networking.Broadcasting.Channels
         protected virtual bool FragmentedChannel => false;
 
         /// <summary>
-        /// Some safe value below 1500 bytes of ethernet mtu
+        /// Some safe value below 1500 bytes of ethernet MTU
         /// </summary>
         protected const int MaxPacketDataSize = 1400;
         private readonly BaseCompressor _compressor;
@@ -21,20 +21,16 @@ namespace Networking.Broadcasting.Channels
         {
             // lzma is very good at compressing (90%-99% on real average voxel data), but quite low on performance and very bad for GA
             // zstd looks like perfect fit in terms of minimum allocations and very high speed and more or less similar compression as lzma
-            // do not use built in deflate, it is shity
+            // do not use built in deflate, it is bad
             _compressor = new ZstdCompressor();
         }
-
-
-        // TODO: should be replaced with dictionary?
+        
         /// <summary>
         /// Internal list of pairs connection + network data which then getting converted to packets. Filled when
         /// PrepareToBroadcast is called
         /// </summary>
         protected readonly List<(Connection connection, NetworkData baseData)> QueuedDataToBroadcast = new();
-
-
-        // TODO: should be replaced with dictionary?
+        
         /// <summary>
         /// List which is getting sent back to DataBroadcaster when GetPacketsToBroadcast is called
         /// Cached only means that it is used for garbage free list usage

@@ -9,6 +9,10 @@ using Networking.Utils;
 
 namespace Networking.Broadcasting.Channels
 {
+    /// <summary>
+    /// Same as reliable, except for splitting packet to multiple and work with them as independent reliable packets to send
+    /// Confirms sending/receiving on assembling after receiving all parts.
+    /// </summary>
     public class ReliableFragmentedChannelBroadcaster : BaseChannelBroadcaster
     {
         /// <summary>

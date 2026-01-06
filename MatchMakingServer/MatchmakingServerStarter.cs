@@ -15,10 +15,7 @@ namespace MatchMakingServer
         // should use some config later
         public void Start()
         {
-            var networkManager = new NetworkManager(NetworkConfig.GetAdjustedDefault(config =>
-            {
-                
-            }));
+            var networkManager = new NetworkManager(NetworkConfig.GetAdjustedDefault(_ => { }));
             _matchMakingServer = new MatchMakingServer(NetworkAgentConfig.GetAdjustedDefault(config =>
             {
                 config.ListeningPort = ListeningPort;

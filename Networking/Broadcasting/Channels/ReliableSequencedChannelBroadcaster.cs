@@ -10,9 +10,8 @@ namespace Networking.Broadcasting.Channels
     /// <summary>
     /// Sends packet with sequence index and sequence value
     /// Waits for some time
-    /// If time is exceeds AckTimeout then sends again last packet from sequence?
-    /// Or waits for ack only for the last in sequence?
-    /// IF ack is received - resets waiting up to this number, if it is the same then we don't need to resend anything
+    /// If time exceeds AckTimeout then sends again last packet from sequence
+    /// If ack is received - resets waiting up to this number, if it is the same then we don't need to resend anything
     /// </summary>
     public class ReliableSequencedChannelBroadcaster : BaseChannelBroadcaster
     {

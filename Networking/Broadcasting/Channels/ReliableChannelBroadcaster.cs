@@ -10,7 +10,7 @@ namespace Networking.Broadcasting.Channels
     /// <summary>
     /// Sends packet with ack id
     /// Waits for some time
-    /// If time is exceeds AckTimeout then sends packet again with the same ack id
+    /// If time exceeds AckTimeout then sends packet again with the same ack id
     /// Until ack received back
     /// On receive sends back ack packet with received id
     /// </summary>
@@ -21,7 +21,6 @@ namespace Networking.Broadcasting.Channels
         /// milliseconds
         /// </summary>
         internal static double AckTimeout = 200;
-
 
         /// <summary>
         /// Connection -> ack id -> packet
